@@ -1,0 +1,49 @@
+1. Write a Python program to calculate the length of a string.  
+s = (input("enter a sentence: "))
+v = s.__len__()
+print(v)
+
+2. Write a Python program to count the number of characters (character frequency) in a string.  Sample String : google.com'
+Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+ 
+s = input("enter a sentence: ")
+u = s.lower()
+for i in ('abcdefghijklmnopqrstuvwxyz'):
+  v= u.count(i)
+  print(i,v)
+
+3. Write a Python program to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return instead of the empty string.  
+Sample String : 'w3resource'
+Expected Result : 'w3ce'
+Sample String : 'w3'
+Expected Result : 'w3w3'
+Sample String : ' w'
+Expected Result : Empty String
+s = input("enter a sentence: ")
+if s.__len__()<2:
+  print("empty string!")
+else:
+  u = s[0:2]
+  v = s[-2:]
+  t = u+v
+  print(t)
+ 
+4. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.  
+Sample String : 'restart'
+Expected Result : 'resta$t'
+
+ s = input("enter a sentence: ")
+u= s[0]
+s= s.replace(u,'$')
+s= u + s[1:]
+print(s)
+
+5. Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string.  
+Sample String : 'abc', 'xyz'
+Expected Result : 'xyc abz'
+s1= input("enter 1 : ")
+s2= input("enter 2 : ")
+print(s1 +" "+ s2)
+s1_new = s2[0:2]+ s1[2:]
+s2_new= s1[0:2] + s2[2:]
+print(s1_new+ " "+s2_new)
